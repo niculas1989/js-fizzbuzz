@@ -27,12 +27,11 @@ const resultElement = document.getElementById('counting');
 const Fizz = '';
 const Buzz = '';
 let counting = '';
-console.log('counting iniziale:', counting);
+console.log('counting iniziale: ', counting);
 
 for (let i = 1; i <= 100; i++) {
     counting += `${i} `;
-    console.log(`counting al giro: ${i} `, counting);
-
+    console.log(counting);
     if (i % 3 == 0) {
         console.log('Fizz');
     } else if (i % 5 == 0) {
@@ -43,3 +42,5 @@ for (let i = 1; i <= 100; i++) {
 console.log(`counting a fine giro: `, counting);
 
 resultElement.innerText = counting;
+
+
