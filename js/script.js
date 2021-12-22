@@ -28,9 +28,12 @@ const resultElement = document.getElementById('counting');
 let counting = '';
 console.log('counting iniziale: ', counting);
 
+// ! Contiamo fino a 100
 for (let i = 1; i <= 100; i++) {
     counting += `${i} `;
     console.log(counting);
+
+    // ! All'interno del FOR specifichiamo quando un numero è divisibile per 3, per 5 o per entrambi
     if ((i % 3 == 0) && (i % 5 == 0)) {
         console.log('FizzBuzz')
     }
