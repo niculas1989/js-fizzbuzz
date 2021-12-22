@@ -22,6 +22,7 @@ Analizziamo la consegna:
     - nei numeri divisibili per 5 stampare Buzz
     - nei numeri divisibili sia per uno che per l'altro stampare FizzBuzz
 */
+const resultElement = document.getElementById('counting');
 
 let counting = '';
 console.log('counting iniziale:', counting);
@@ -32,3 +33,5 @@ for (let i = 1; i <= 100; i++) {
 }
 
 console.log(`counting a fine giro: `, counting);
+
+resultElement.innerText = counting;
