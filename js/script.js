@@ -22,28 +22,50 @@ Analizziamo la consegna:
     - nei numeri divisibili per 5 stampare Buzz
     - nei numeri divisibili sia per uno che per l'altro stampare FizzBuzz
 */
-const resultElement = document.getElementById('counting');
 
+const list = document.getElementById('my-list');
 
-let counting = '';
-console.log('counting iniziale: ', counting);
+let listItems = '';
 
-// ! Contiamo fino a 100
 for (let i = 1; i <= 100; i++) {
-    counting += `${i} `;
-    console.log(counting);
-
-    // ! All'interno del FOR specifichiamo quando un numero è divisibile per 3, per 5 o per entrambi
-    if ((i % 3 == 0) && (i % 5 == 0)) {
-        console.log('FizzBuzz')
-    }
-    else if (i % 3 == 0) {
-        console.log('Fizz');
-    } else if (i % 5 == 0) {
-        console.log('Buzz');
+    if (i % 3 === 0 && i % 5 === 0) {
+        listItems += `<li class="fizzbuzz">FizzBuzz</li>`;
+    } else if (i % 3 === 0) {
+        listItems += `<li class="fizz">Fizz</li>`;
+    } else if (i % 5 === 0) {
+        listItems += `<li class="buzz">Buzz</li>`;
+    } else {
+        listItems += `<li>${i}</li>`;
     }
 }
+list.innerHTML = listItems;
 
-console.log(`counting a fine giro: `, counting);
 
-resultElement.innerText = counting;
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('FizzBuzz');
+//     } else if (i % 3 === 0) {
+//         console.log('Fizz');
+//     } else if (i % 5 === 0) {
+//         console.log('Buzz');
+//     } else {
+//         console.log(i);
+//     }
+
+/*   if (!(i % 3) && !(i % 5)) {
+  console.log('FizzBuzz');
+} else if (!(i % 3)) {
+  console.log('Fizz');
+} else if (!(i % 5)) {
+  console.log('Buzz');
+} else {
+  console.log(i);
+} */
+
+// # 'falsy'
+// null
+// undefined
+// NaN
+// 0
+// ''
